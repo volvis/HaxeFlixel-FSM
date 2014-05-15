@@ -67,7 +67,7 @@ class Idle extends FlxFSMState<FlxSprite>
 			Owner.animation.play("standing");
 		}
 		
-		if (FlxG.keys.pressed.UP)
+		if (FlxG.keys.pressed.UP && Owner.isTouching(FlxObject.DOWN))
 		{
 			FSM.state = new Jump();
 			return;
