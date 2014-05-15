@@ -15,9 +15,9 @@ class SlimePink extends FlxSprite
 {
 	public var fsm:FlxFSM<FlxSprite>;
 	
-    public function new(X:Float = 0, Y:Float = 0)
-    {
-        super(X, Y);
+	public function new(X:Float = 0, Y:Float = 0)
+	{
+		super(X, Y);
 		
 		loadGraphic("assets/SlimePink.png", true, true, 16, 16);
 		animation.add("standing", [0, 1], 3);
@@ -31,18 +31,18 @@ class SlimePink extends FlxSprite
 		maxVelocity.x = 100;
 		
 		fsm = new FlxFSM<FlxSprite>(this, new Idle());
-    }
+	}
 
-    override public function update():Void
-    {
+	override public function update():Void
+	{
 		fsm.update();
-        super.update();
-    }
+		super.update();
+	}
 
-    override public function destroy():Void
-    {
-        super.destroy();
-    }
+	override public function destroy():Void
+	{
+		super.destroy();
+	}
 }
 
 class Idle extends FlxFSMState<FlxSprite>
